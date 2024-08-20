@@ -12,8 +12,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Sim.",
-                afirmação: "A música sempre foi um dos recursos mais utilizados para denunciar o racismo"
+                afirmação: ["A música sempre foi um dos recursos mais utilizados para denunciar o racismo",
+                "por isso ela ajuda a denunciar o racismo"
+            ]
             },
+
             {
                 texto: "Não.",
                 afirmação: "A música acaba piorando o Racismo"
@@ -84,6 +87,10 @@ function mostraResultado() {
     caixaPerguntas.textContent = "Em 2049...";
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
+}
+
+function aleatorio(lista){
+    const posicao = Math.random()*lista.length
 }
 
 mostraPergunta();
